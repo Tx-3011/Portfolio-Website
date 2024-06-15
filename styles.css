@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Tiny5&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+:root{
+
+/* VARIABLES */
+
+    /* COLORS */
+
+    --blackC: #050401;
+    --whiteC:#FFFAFF;
+    --TEXTCOLOR-Name: #FC5130;
+    --TEXTCOLOR-Roles: #30BCED;
+
+}
+
+
+    body{
+
+    font: 1.5rem "Roboto Condensed" ,sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+
+
+}
+
+
+.LeftContent {
+    background-color: var(--blackC);
+    color: var(--whiteC);
+    padding: 1rem;
+    width: 65%;
+    height: 100%;
+    font-size: clamp(1rem, 2.2vh, 1.5rem);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+
+.logo{
+    margin-top: 2.5rem;
+    padding-right: 1.3rem;
+
+}
+
+.logo:hover{
+    transform: scale(1.1);
+
+}
+
+:any-link{
+    text-decoration: none;
+}
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    font-size: 3rem;
+    line-height: 200%;
+
+} 
+
+.roles{
+    color: var(--TEXTCOLOR-Roles);
+    white-space: nowrap;
+    font-size: 6rem;
+}
+
+.name{
+    font-size: 6rem;
+    color: var(--TEXTCOLOR-Name);
+
+}
+
+.RightContent {
+    width: 35%;
+    height: 100%;
+    background-color: var(--whiteC);
+
+
+}
+
