@@ -1,0 +1,68 @@
+body{
+    background-color: black;
+    font-size: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #d7b94c;
+    width: auto;
+    height: 100vh;
+}
+
+.wrapper{
+    display: flex;
+
+}
+
+.static{
+    color: whitesmoke;
+    white-space: nowrap;
+
+}
+
+.dynamic{
+    line-height: 110px;
+    overflow: hidden;
+    height: 119px;
+
+}
+
+
+.dynamic li{
+    font-size: 6rem;
+    list-style: none;
+    position: relative;
+    top: 0;
+    animation: slide 12s steps(4) infinite;
+}
+
+.dynamic li::after{
+    content: "";
+    position: absolute;
+    height:100%;
+    width:100%;
+    border-left:2px solid #d7b94c;
+    left:0;
+    background-color: black;
+    animation: typing 3s steps(11) infinite;
+}
+
+@keyframes slide {
+
+    100%{
+        top: -440px;
+    }
+    
+}
+
+@keyframes typing{
+    40%,60% {
+        left: calc(100% + 30px)
+
+    }
+
+    100%{
+        left: 0;
+    }
+
+}
