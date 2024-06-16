@@ -74,6 +74,12 @@
 
 } 
 
+.icons{
+    display: flex;
+    justify-content: center;
+
+}
+
 .sideAlign{
     display: flex;
 }
@@ -97,7 +103,7 @@
     height: 100%;
     left: 0;
     background-color: var(--blackC);
-    animation: typing 3s steps(13) infinite;
+    animation: typing 3s steps(30) infinite;
 }
 
 .dynamic{
@@ -134,10 +140,14 @@
     font-size: 6rem;
 }
 
-.name,
-.red{
-    font-size: 6rem;
+.name{
+
     color: var(--TEXTCOLOR-Name);
+}
+
+.white{
+    font-size: 6rem;
+    color: var(--whiteC);
 
 }
 
