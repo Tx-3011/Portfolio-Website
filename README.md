@@ -8,3 +8,4 @@
 -> ~~Make a typing animation for the roles~~ <br/>
 -> ~~Add media query for mobile~~ <br/>
 -> ~~Add Skills somewhere~~ <br/>
+-> Now make projects, so I can actually add them
