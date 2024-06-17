@@ -1,101 +1,150 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Tiny5&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
+
+
+/* Universal styles */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-
 }
 
-:root{
 
-/* VARIABLES */
 
-    /* COLORS */
-
+/* Root variables */
+:root {
+    /* Colors */
     --blackC: #050401;
-    --whiteC:#FFFAFF;
+    --whiteC: #FFFAFF;
     --TEXTCOLOR-Name: #FC5130;
     --TEXTCOLOR-Roles: #30BCED;
-
 }
 
 
-    body{
 
-    font: 1.5rem "Roboto Condensed" ,sans-serif;
+/* Body styles */
+body {
+    font: 1.5rem "Inter", sans-serif;
+    font-weight: 300;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: center;
     height: 100vh;
-
-
-}
-
-
-.LeftContent {
     background-color: var(--blackC);
     color: var(--whiteC);
+}
+
+
+
+/* Skill styles */
+.skill {
+    text-align: center;
+    transform: translateX(-20px);
+}
+
+
+
+/* Content styles */
+.content {
+    background-color: var(--blackC);
+    background-image: url(./backgounds/buildings-bg.jpg);
+    background-size: 100%;
+    background-position: bottom;
+    color: var(--whiteC);
     padding: 1rem;
-    width: 65%;
-    height: 100%;
-    font-size: clamp(1rem, 2.2vh, 1.5rem);
-    
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
-
 }
 
 
-.logo{
-    margin-top: 2.5rem;
-    padding-right: 1.3rem;
 
+/* Logo styles */
+.logo {
+    padding-right: 1.1rem;
 }
 
-.logo:hover{
+
+
+.logo:hover {
     transform: scale(1.1);
-
 }
 
-:any-link{
+hr{
+    display: none;
+}
+
+
+/* Link styles */
+:any-link {
     text-decoration: none;
 }
 
-.intro{
+
+
+/* Intro styles */
+.intro {
     display: flex;
     flex-direction: column;
     align-self: center;
     justify-content: center;
-    font-size: 6rem;
-    /* line-height: 200%; */
-
-} 
-
-.icons{
-    display: flex;
-    justify-content: center;
-
+    font-size: 4.75rem;
 }
 
-.sideAlign{
+p.name.static{
+    padding-top: 1rem;
+}
+
+
+
+/* Icon styles */
+.icons {
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+
+/* Side align styles */
+.sideAlign {
     display: flex;
 }
 
-.dynamic li{
+
+
+/* Tejdeep styles */
+.tejdeep {
+    font-weight: 600;
+    color: var(--TEXTCOLOR-Name);
+}
+
+
+
+/* Dynamic list styles */
+.dynamic {
+    line-height: 110px;
+    overflow: hidden;
+    height: 119px;
+}
+
+
+
+.dynamic li {
     margin-left: 1rem;
     list-style: none;
     color: var(--TEXTCOLOR-Roles);
     position: relative;
     top: 0;
     animation: slide 9s steps(3) infinite;
-
+    font-weight: 600;
 }
 
 
-.dynamic li::after{
+
+.dynamic li::after {
     content: "";
     position: absolute;
     border-left: 2px solid var(--TEXTCOLOR-Roles);
@@ -106,56 +155,93 @@
     animation: typing 3s steps(30) infinite;
 }
 
-.dynamic{
-    line-height: 110px;
-    overflow: hidden;
-    height: 119px;
 
-}
 
+/* Keyframes */
 @keyframes slide {
-
-    100%{
+    100% {
         top: -330px;
     }
 }
 
-@keyframes typing {
-   
-    40%,
-    60%{
-        left: calc(100% + 30px);
 
+
+@keyframes typing {
+    40%, 60% {
+        left: calc(100% + 30px);
+    }
+    100% {
+        left: 0;
+    }
+}
+
+
+
+/* Roles styles */
+.roles {
+    color: var(--TEXTCOLOR-Roles);
+    white-space: nowrap;
+    font-size: 4.75rem;
+}
+
+
+
+/* Name styles */
+.name {
+    text-align: center;
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width:576px) {
+
+    .skill{
+        font-size: 1rem;
+        transform: translateX(1px);
+        margin-top: 2rem;
     }
 
-    100%{
-        left: 0;
+    .intro{
+        font-size: 2.5rem;
+    }
+
+    .roles{
+        font-size: 2.5rem;
+    }
+
+    .logo{
+        width:45px;
+        height:45px
+    }
+
+    .content{
+        /* background-image: url(./backgounds/mobile-buildings-bg-.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: bottom; */
+
+        background-image: none;
+    }
+
+    p.name.static{
+        padding-top: 2rem;
+    }
+
+    /* Changing Animations */
+
+    .dynamic {
+        line-height:50px;
+        overflow: hidden;
+        height: 50px;
+    }
+    
+        
+    /* Keyframes */
+    @keyframes slide {
+        100% {
+            top: -150px;
+        }
     }
     
 }
-
-.roles{
-    color: var(--TEXTCOLOR-Roles);
-    white-space: nowrap;
-    font-size: 6rem;
-}
-
-.name{
-
-    color: var(--TEXTCOLOR-Name);
-}
-
-.white{
-    font-size: 6rem;
-    color: var(--whiteC);
-
-}
-
-.RightContent {
-    width: 35%;
-    height: 100%;
-    background-color: var(--whiteC);
-
-
-}
-
