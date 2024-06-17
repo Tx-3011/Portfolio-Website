@@ -228,6 +228,10 @@ p.name.static{
         padding-top: 2rem;
     }
 
+    hr{
+        display:block
+    }
+
     /* Changing Animations */
 
     .dynamic {
