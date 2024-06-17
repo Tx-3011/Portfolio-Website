@@ -183,3 +183,58 @@ body {
 .name {
     text-align: center;
 }
+
+
+/* Media Queries */
+
+@media screen and (max-width:576px) {
+
+    .skill{
+        font-size: 1rem;
+        transform: translateX(1px);
+        margin-top: 2rem;
+    }
+
+    .intro{
+        font-size: 2.5rem;
+    }
+
+    .roles{
+        font-size: 2.5rem;
+    }
+
+    .logo{
+        width:45px;
+        height:45px
+    }
+
+    .content{
+        /* background-image: url(./backgounds/mobile-buildings-bg-.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: bottom; */
+
+        background-image: none;
+    }
+
+    p.name.static{
+        padding-top: 2rem;
+    }
+
+    /* Changing Animations */
+
+    .dynamic {
+        line-height:50px;
+        overflow: hidden;
+        height: 50px;
+    }
+    
+        
+    /* Keyframes */
+    @keyframes slide {
+        100% {
+            top: -150px;
+        }
+    }
+    
+}
