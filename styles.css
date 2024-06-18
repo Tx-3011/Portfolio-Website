@@ -17,6 +17,8 @@
     /* Colors */
     --blackC: #050401;
     --whiteC: #FFFAFF;
+    --grayC:rgb(48, 48, 54);
+    --grayC2:#0a0909;
     --TEXTCOLOR-Name: #FC5130;
     --TEXTCOLOR-Roles: #30BCED;
 }
@@ -47,8 +49,7 @@ body {
 
 /* Content styles */
 .content {
-    background-color: var(--blackC);
-    background-image: url(./backgounds/buildings-bg.jpg);
+    background: linear-gradient(rgba(48, 48, 54,.1), rgba(48, 48, 54,.1)), url(./backgounds/buildings-bg.jpg);
     background-size: 100%;
     background-position: bottom;
     color: var(--whiteC);
@@ -151,7 +152,7 @@ p.name.static{
     width: 100%;
     height: 100%;
     left: 0;
-    background-color: var(--blackC);
+    background-color: var(--grayC2);
     animation: typing 3s steps(30) infinite;
 }
 
@@ -216,12 +217,8 @@ p.name.static{
     }
 
     .content{
-        /* background-image: url(./backgounds/mobile-buildings-bg-.jpg);
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        background-position: bottom; */
-
-        background-image: none;
+       background-image: bottom;
+        
     }
 
     p.name.static{
@@ -229,7 +226,9 @@ p.name.static{
     }
 
     hr{
-        display:block
+        display:block;
+        background-color:grey;
+        opacity: 30%;
     }
 
     /* Changing Animations */
