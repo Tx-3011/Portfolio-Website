@@ -18,7 +18,7 @@
     --blackC: #050401;
     --whiteC: #FFFAFF;
     --grayC:rgb(48, 48, 54);
-    --grayC2:#0a0909;
+    --grayC2:#070506;
     --TEXTCOLOR-Name: #FC5130;
     --TEXTCOLOR-Roles: #30BCED;
 }
@@ -30,9 +30,10 @@ body {
     font: 1.5rem "Inter", sans-serif;
     font-weight: 300;
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    height: 100vh;
+    /* height: 100vh; */
     background-color: var(--blackC);
     color: var(--whiteC);
 }
@@ -49,23 +50,41 @@ body {
 
 /* Content styles */
 .content {
-    background: linear-gradient(rgba(48, 48, 54,.1), rgba(48, 48, 54,.1)), url(./backgounds/buildings-bg.jpg);
-    background-size: 100%;
-    background-position: bottom;
+    background: linear-gradient(rgba(0, 0, 0, 0.39), rgba(0, 0, 0, 0.39)), url(./backgounds/full-bottom-hills.jpg);
+    background-position:bottom;
+    background-repeat:no-repeat;
+    background-size:contain;
     color: var(--whiteC);
     padding: 1rem;
+    height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     overflow: hidden;
+    transform: translateY(-180px);
 }
+
+.icons {
+    margin-top: 1rem;
+    order: 1; 
+}
+
+/* .bottom-img {
+    order: 2;
+    background-image: url(./backgounds/bottom-hills.png); 
+    width: 400px;
+    height: 400px;
+    object-fit: none;
+} */
 
 
 
 /* Logo styles */
 .logo {
     padding-right: 1.1rem;
+    height: 42.4px;
 }
 
 
@@ -73,6 +92,15 @@ body {
 .logo:hover {
     transform: scale(1.1);
 }
+
+/* work on changing logo colors when hover
+
+.ldin:hover {
+    transform: scale(1.1);
+}
+.github:hover {
+    transform: scale(1.1);
+} */
 
 hr{
     display: none;
@@ -184,7 +212,6 @@ p.name.static{
     white-space: nowrap;
     font-size: 4.75rem;
 }
-
 
 
 /* Name styles */
